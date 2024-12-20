@@ -1,0 +1,326 @@
+/* Color Variables */
+:root {
+  --raja-green: #008000;
+  --raja-dark-green: #006400;
+  --raja-light-green: #90EE90;
+  --raja-white: #ffffff;
+  --raja-black: #000000;
+  --raja-gray: #f5f5f5;
+  --raja-overlay: rgba(0, 128, 0, 0.05);
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--raja-white);
+  overflow-x: hidden;
+}
+
+/* Enhanced Navbar Styles */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1.2rem 2rem;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled {
+  padding: 0.8rem 2rem;
+}
+
+.navbar-brand.brand-name {
+  color: var(--raja-green) !important;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.headerachor {
+  color: var(--raja-black) !important;
+  font-weight: 600;
+  margin: 0 15px;
+  padding: 8px 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.headerachor::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--raja-green);
+  transition: width 0.3s ease;
+}
+
+.headerachor:hover::after {
+  width: 100%;
+}
+
+/* Enhanced Home Section */
+#Home {
+  padding: 8rem 0 4rem;
+  background: linear-gradient(135deg, 
+    var(--raja-white) 0%,
+    var(--raja-overlay) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+#Home::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, var(--raja-green) 0%, transparent 70%);
+  opacity: 0.1;
+  transform: rotate(-45deg);
+}
+
+.Hello {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--raja-black);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.Hello span {
+  color: var(--raja-green);
+}
+
+/* Enhanced Social Media Icons */
+.social_media_icon {
+  margin-top: 2rem;
+}
+
+.social_media_icon .btn {
+  margin: 10px;
+  border-radius: 12px;
+  width: 55px;
+  height: 55px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--raja-white);
+  color: var(--raja-green);
+  border: 2px solid var(--raja-green);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.social_media_icon .btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  background-color: var(--raja-green);
+  color: var(--raja-white);
+  box-shadow: 0 10px 20px rgba(0, 128, 0, 0.2);
+}
+
+/* Enhanced Features Section */
+#Whatido {
+  padding: 6rem 0;
+  background-color: var(--raja-white);
+  position: relative;
+}
+
+#Whatido h1 {
+  color: var(--raja-green);
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 800;
+  font-size: 3.5rem;
+  position: relative;
+}
+
+#Whatido h1::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--raja-green);
+  border-radius: 2px;
+}
+
+.Feature-Heading {
+  color: var(--raja-green);
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 1rem;
+  border-left: 5px solid var(--raja-green);
+}
+
+.Features-paragraph {
+  color: #333;
+  line-height: 1.9;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.Features-paragraph::before {
+  content: '💥';
+  position: absolute;
+  left: 0;
+  opacity: 0.8;
+}
+
+/* Enhanced Images */
+.Feature-svg-image, .Feature-svg-image-1 {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.Feature-svg-image:hover, .Feature-svg-image-1:hover {
+  transform: scale(1.03) translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhanced Trophy Icons */
+.dev-icon {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.dev-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.1));
+}
+
+.dev-icon img:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Enhanced Footer */
+.footer {
+  background-color: var(--raja-green);
+  color: var(--raja-white);
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    var(--raja-light-green) 50%,
+    transparent 100%);
+}
+
+/* Enhanced Animations */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  30% { transform: rotate(20deg); }
+  60% { transform: rotate(-10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+/* Enhanced Section Transitions */
+.feature-1, .feature-2, .feature-3 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: 0.3s;
+}
+
+.feature-2 {
+  animation-delay: 0.5s;
+}
+
+.feature-3 {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .Hello {
+    font-size: 3rem;
+  }
+  
+  .Feature-Heading {
+    font-size: 2.2rem;
+  }
+  
+  #Whatido h1 {
+    font-size: 2.8rem;
+  }
+  
+  .social_media_icon .btn {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .Features-paragraph {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--raja-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--raja-green);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--raja-dark-green);
+}
